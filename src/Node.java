@@ -7,6 +7,10 @@ public class Node {
     private Node parent;
     private int priority;
 
+    /*
+    Constructor that takes an Interval object i as its parameter. The
+    constructor must generate a priority for the node.
+     */
     public Node(Interval i) {
         interval = i;
         Random r = new Random(); //generate a random priority

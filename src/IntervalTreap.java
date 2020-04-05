@@ -27,6 +27,12 @@ public class IntervalTreap {
         return height;
     }
 
+    public void rotate(Node parrNode, Node currNode, Node SuccNode) {
+        if (parrNode.getLeft() == currNode)
+
+    }
+
+
     /*
         adds node z, whose interv attribute references an
         Interval object, to the interval treap. This operation must maintain the required interval
