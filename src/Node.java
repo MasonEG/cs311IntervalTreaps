@@ -21,12 +21,24 @@ public class Node {
         return parent;
     }
 
+    public void setParent(Node n) {
+        parent = n;
+    }
+
     public Node getLeft() {
         return left;
     }
 
+    public void setLeft(Node n) {
+         left = n;
+    }
+
     public Node getRight() {
         return right;
+    }
+
+    public void setRight(Node n) {
+        right = n;
     }
 
     public Interval getInterval() {
@@ -43,6 +55,10 @@ public class Node {
             ret = Integer.max(ret, right.getIMax());
         }
         return ret;
+    }
+
+    public void setIMax() {
+
     }
 
     public int getPriority() {

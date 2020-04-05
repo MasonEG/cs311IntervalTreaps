@@ -6,13 +6,15 @@ public class IntervalTreap {
 
     public IntervalTreap() {
         size = 0;
-        height = 0;
+        height = (int) (Math.ceil(Math.log(n) / Math.log(2));
         root = null;
     }
 
+    //TODO
     public String toString() { //TODO
         Node cur = root;
-        String ret = ""
+        String ret = "";
+        return ret;
     }
 
     public Node getRoot() {
@@ -27,8 +29,16 @@ public class IntervalTreap {
         return height;
     }
 
+    int getMid(int s, int e) {
+        return s + (e - s) / 2;
+    }
+
     public void rotate(Node parrNode, Node currNode, Node SuccNode) {
         if (parrNode.getLeft() == currNode)
+
+
+
+            //update height and imax
 
     }
 
