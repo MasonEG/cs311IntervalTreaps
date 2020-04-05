@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9ea08c4-4efd-4160-88dc-565c347df530" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/IntervalNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IntervalNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IntervalNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IntervalTreap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IntervalTreap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interval.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IntervalDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IntervalDatabase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586056161801</updated>
-      <workItem from="1586059782624" duration="1999000" />
+      <workItem from="1586059782624" duration="2966000" />
     </task>
     <task id="LOCAL-00001" summary="started writing IntervalTreap and IntervalNode classes">
       <created>1586061295439</created>
@@ -87,7 +88,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586061434335</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Created Interval database and changed IntervalNode to Interval">
+      <created>1586061921446</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586061921446</updated>
+    </task>
+    <task id="LOCAL-00004" summary="changed class names">
+      <created>1586061988468</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586061988468</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,7 +110,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="started writing IntervalTreap and IntervalNode classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="started writing IntervalTreap and IntervalNode classes" />
+    <MESSAGE value="Created Interval database and changed IntervalNode to Interval" />
+    <MESSAGE value="changed class names" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed class names" />
   </component>
   <component name="WindowStateProjectService">
     <state x="398" y="127" width="800" height="678" key="#Project_Structure" timestamp="1586056176005">
@@ -106,13 +123,13 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1128" y="588" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586061383979" />
-    <state x="905" y="292" key="CommitChangelistDialog2" timestamp="1586061920442">
+    <state x="905" y="292" key="CommitChangelistDialog2" timestamp="1586061987528">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="905" y="292" key="CommitChangelistDialog2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586061920442" />
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1586061924555">
+    <state x="905" y="292" key="CommitChangelistDialog2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586061987528" />
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1586061991843">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586061924555" />
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586061991843" />
   </component>
 </project>
