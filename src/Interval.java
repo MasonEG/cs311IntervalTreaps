@@ -1,6 +1,6 @@
 public class Interval {
-    public int low;
-    public int high;
+    private int low;
+    private int high;
 
     public Interval (int l, int h) throws IllegalArgumentException{
         if (l > h) {

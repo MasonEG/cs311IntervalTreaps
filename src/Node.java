@@ -4,10 +4,12 @@ public class Node {
     public Node right;
     public Node parent;
     public int priority;
+    public int iMax;
 
-    public Node ( Interval i){
-
+    public Node (Interval i){
+        interval = i;
     }
+
     public Node getParent(){
         return parent;
     }
@@ -25,12 +27,10 @@ public class Node {
     }
 
     public int getMax(){
-
         return 0;
     }
 
     public int getPriority(){
-
         return priority;
     }
 }
