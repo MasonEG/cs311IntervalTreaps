@@ -1,17 +1,15 @@
 public class IntervalDatabase {
 
-    public Node root;
+    public IntervalNode root;
 
     public Interval[] intervalNodes;
 
-    public IntervalDatabase (Node root) {
-        this.root = root;
-    }
 
-    public Node intervalSearch (Interval i) {
-        Node curr = this.root;
-        while(curr != null && !i.overlaps(curr.interval)){
-            if(curr.left != null && curr.iMax >= i.low)
+
+    public Interval intervalSearch (Interval i) {
+        IntervalNode curr = this.root;
+        while(curr != null && curr.left.imax >= i.low){
+            if(curr.left != null && curr.left.imax >= i.low)
                 curr = curr.left;
             else
                 curr = curr.left;
