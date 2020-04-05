@@ -1,16 +1,19 @@
+import java.util.Random;
+
 public class Node {
     private Interval interval;
     private Node left;
     private Node right;
     private Node parent;
     private int priority;
-    private int iMax;
 
-    public Node (Interval i){
+    public Node(Interval i) {
         interval = i;
+        Random r = new Random(); //generate a random priority
+        priority = r.nextInt();
     }
 
-    public Node getParent(){
+    public Node getParent() {
         return parent;
     }
 
@@ -22,11 +25,11 @@ public class Node {
         return right;
     }
 
-    public Interval getInterval(){
+    public Interval getInterval() {
         return interval;
     }
 
-    public int getIMax(){
+    public int getIMax() {
         int ret = interval.getHigh();
 
         if (left != null) {
@@ -38,7 +41,7 @@ public class Node {
         return ret;
     }
 
-    public int getPriority(){
+    public int getPriority() {
         return priority;
     }
 }

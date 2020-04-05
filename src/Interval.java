@@ -2,7 +2,7 @@ public class Interval {
     private int low;
     private int high;
 
-    public Interval (int l, int h) throws IllegalArgumentException{
+    public Interval(int l, int h) throws IllegalArgumentException {
         if (l > h) {
             throw new IllegalArgumentException("the interval's low value cannot be higher than the interval's high value!");
         }
@@ -10,9 +10,8 @@ public class Interval {
         this.high = h;
     }
 
-    public boolean overlaps (Interval i) {
-        if (this.low < i.high && i.low < this.high) return true;
-        else return false;
+    public boolean overlaps(Interval i) {
+        return (this.low < i.high && i.low < this.high);
     }
 
     public int getLow() {

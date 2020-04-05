@@ -4,26 +4,26 @@ public class IntervalTreap {
     private int size;
     private int height;
 
-    public IntervalTreap(){
+    public IntervalTreap() {
         size = 0;
         height = 0;
         root = null;
     }
 
-    public String toString() {
+    public String toString() { //TODO
         Node cur = root;
         String ret = ""
     }
 
-    public Node getRoot(){
+    public Node getRoot() {
         return root;
     }
 
-    public int getSize(){
+    public int getSize() {
         return size;
     }
 
-    public int getHeight(){
+    public int getHeight() {
         return height;
     }
 
@@ -33,7 +33,7 @@ public class IntervalTreap {
         treap properties. The expected running time of this method should be O(log n) on an n-node
         interval treap.
      */
-    public void intervalInsert( Node z){
+    public void intervalInsert(Node z) {
 
     }
 
@@ -42,7 +42,7 @@ public class IntervalTreap {
         must maintain the required interval treap properties. The expected running time of this
         method should be O(log n) on an n-node interval treap.
      */
-    public void intervalDelete(Node z){
+    public void intervalDelete(Node z) {
 
     }
 
@@ -52,9 +52,9 @@ public class IntervalTreap {
         This method must not modify the interval treap. The expected running time of this method
         should be O(log n) on an n-node interval treap.
      */
-    public Node intervalSearch (Interval i) {
+    public Node intervalSearch(Interval i) {
         Node curr = this.root;
-        while(curr != null && !i.overlaps(curr.getInterval())){
+        while (curr != null && !i.overlaps(curr.getInterval())) {
             if (curr.getLeft() != null && curr.getLeft().getIMax() >= i.getLow())
                 curr = curr.getLeft();
             else
@@ -62,7 +62,6 @@ public class IntervalTreap {
         }
         return curr;
     }
-
 
 
 }
