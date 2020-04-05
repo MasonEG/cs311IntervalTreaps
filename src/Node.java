@@ -27,7 +27,15 @@ public class Node {
     }
 
     public int getIMax(){
-        return iMax;
+        int ret = interval.getHigh();
+
+        if (left != null) {
+            ret = Integer.max(ret, left.getIMax());
+        }
+        if (right != null) {
+            ret = Integer.max(ret, right.getIMax());
+        }
+        return ret;
     }
 
     public int getPriority(){
