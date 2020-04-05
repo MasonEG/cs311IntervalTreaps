@@ -4,8 +4,6 @@ public class IntervalTreap {
     public int size = 0;
     public int height = 0;
 
-    public Interval[] intervalNodes;
-
     public IntervalTreap(){
 
     }
@@ -46,8 +44,8 @@ public class IntervalTreap {
     //should be O(log n) on an n-node interval treap.
     public Node intervalSearch (Interval i) {
         Node curr = this.root;
-        while(curr != null && curr.left.imax >= i.low){
-            if(curr.left != null && curr.left.imax >= i.low)
+        while(curr != null && !i.overlaps(curr.interval)){
+            if (curr.left != null && curr.left.iMax >= i.low)
                 curr = curr.left;
             else
                 curr = curr.left;
