@@ -60,6 +60,26 @@ public class IntervalTreap {
         interval treap.
      */
     public void intervalInsert(Node z) {
+        Node temp = root;
+        while(z.getInterval().getLow() != temp.getInterval().getLow()){
+
+            if (z.getInterval().getLow() > temp.getInterval().getLow() && temp.getRight() != null)
+                temp = temp.getRight();
+
+            else if(z.getInterval().getLow() < temp.getInterval().getLow() && temp.getRight() != null)
+                temp = temp.getLeft();
+
+            else if (z.getInterval().getLow() > temp.getInterval().getLow() && temp.getRight() == null) {
+                temp.setRight(z);
+                z.setParent(temp);
+
+            }
+            else if (z.getInterval().getLow() > temp.getInterval().getLow() && temp.getLeft() == null) {
+                temp.setLeft(z);
+                z.setParent(temp);
+
+            }
+        }
 
     }
 
