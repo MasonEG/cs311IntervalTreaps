@@ -1,9 +1,12 @@
 public class IntervalDatabase {
 
+    public IntervalNode root;
+
     public Interval[] intervalNodes;
 
-    public Interval intervalSearch (int h, int l) {
+    public Interval intervalSearch (Interval i) {
 
+        return null;
     }
 
     public void intervalInsert (Interval x) {
