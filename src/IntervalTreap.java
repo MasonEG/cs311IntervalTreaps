@@ -1,6 +1,6 @@
 public class IntervalTreap {
 
-    public Node root;
+    private Node root;
     public int size = 0;
     public int height = 0;
 
@@ -44,11 +44,11 @@ public class IntervalTreap {
     //should be O(log n) on an n-node interval treap.
     public Node intervalSearch (Interval i) {
         Node curr = this.root;
-        while(curr != null && !i.overlaps(curr.interval)){
-            if (curr.left != null && curr.left.iMax >= i.low)
-                curr = curr.left;
+        while(curr != null && !i.overlaps(curr.getInterval())){
+            if (curr.getLeft() != null && curr.getLeft().getIMax() >= i.getLow())
+                curr = curr.getLeft();
             else
-                curr = curr.left;
+                curr = curr.getLeft();
         }
         return curr;
     }

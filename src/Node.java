@@ -1,10 +1,10 @@
 public class Node {
-    public Interval interval;
-    public Node left;
-    public Node right;
-    public Node parent;
-    public int priority;
-    public int iMax;
+    private Interval interval;
+    private Node left;
+    private Node right;
+    private Node parent;
+    private int priority;
+    private int iMax;
 
     public Node (Interval i){
         interval = i;
@@ -26,8 +26,8 @@ public class Node {
         return interval;
     }
 
-    public int getMax(){
-        return 0;
+    public int getIMax(){
+        return iMax;
     }
 
     public int getPriority(){
