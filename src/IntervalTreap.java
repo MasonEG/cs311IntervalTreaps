@@ -10,7 +10,6 @@ public class IntervalTreap {
         root = null;
     }
 
-    //TODO
     public String toString() { //TODO
         Node cur = root;
         String ret = "";
@@ -33,8 +32,19 @@ public class IntervalTreap {
         return s + (e - s) / 2;
     }
 
-    public void rotate(Node parrNode, Node currNode, Node SuccNode) {
-        if (parrNode.getLeft() == currNode)
+    public static void rotate(Node parentNode, Node currNode) { //bases off priority
+        if (parentNode.getLeft() == currNode) { // rotate left
+            currNode.setParent(parentNode.getParent());
+            parentNode.setParent(currNode);
+            parentNode.setRight(currNode.getLeft());
+            currNode.setLeft(parentNode);
+        }
+        else { // rotate right
+            currNode.setParent(parentNode.getParent());
+            parentNode.setParent(currNode);
+            parentNode.setLeft(currNode.getRight());
+            currNode.setRight(parentNode);
+        }
 
 
 
