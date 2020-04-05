@@ -14,4 +14,13 @@ public class Interval {
         if (this.low < i.high && i.low < this.high) return true;
         else return false;
     }
+
+    public int getLow() {
+        return low;
+    }
+
+    public int getHigh() {
+        return high;
+    }
+
 }
