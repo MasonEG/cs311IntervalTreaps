@@ -61,24 +61,27 @@ public class IntervalTreap {
      */
     public void intervalInsert(Node z) {
         Node temp = root;
-        while(z.getInterval().getLow() != temp.getInterval().getLow()){
+        boolean flag = false;
 
-            if (z.getInterval().getLow() > temp.getInterval().getLow() && temp.getRight() != null)
+        while(!flag) {
+            if (z.getInterval().getLow() >= temp.getInterval().getLow() && temp.getRight() != null)
                 temp = temp.getRight();
 
-            else if(z.getInterval().getLow() < temp.getInterval().getLow() && temp.getRight() != null)
+            else if (z.getInterval().getLow() < temp.getInterval().getLow() && temp.getRight() != null)
                 temp = temp.getLeft();
 
-            else if (z.getInterval().getLow() > temp.getInterval().getLow() && temp.getRight() == null) {
+            else if (z.getInterval().getLow() >= temp.getInterval().getLow() && temp.getRight() == null) {
                 temp.setRight(z);
                 z.setParent(temp);
+                flag = true;
 
-            }
-            else if (z.getInterval().getLow() > temp.getInterval().getLow() && temp.getLeft() == null) {
+            } else if (z.getInterval().getLow() > temp.getInterval().getLow() && temp.getLeft() == null) {
                 temp.setLeft(z);
                 z.setParent(temp);
+                flag = true;
 
             }
+
         }
 
     }
@@ -89,6 +92,9 @@ public class IntervalTreap {
         method should be O(log n) on an n-node interval treap.
      */
     public void intervalDelete(Node z) {
+
+
+        //if the node youre deleting has two children you will have to rotate
 
     }
 
