@@ -107,6 +107,7 @@ public class IntervalTreap {
 
         Node temp = root;
         while (true) {
+
             if (z.getInterval().getLow() >= temp.getInterval().getLow() && temp.getRight() != null)
                 temp = temp.getRight();
 
@@ -210,14 +211,15 @@ public class IntervalTreap {
         public Node intervalSearchExactly (Interval i){
             Node curr = this.root;
             while (curr != null && !i.overlaps(curr.getInterval())) {
-                if (curr.getLeft() != null && curr.getLeft().getIMax() >= i.getLow())
+                if (curr.getInterval().getLow() == i.getLow() && curr.getInterval().getHigh() == i.getHigh())
+                    return curr;
+
+                else if (curr.getLeft() != null && curr.getLeft().getIMax() >= i.getLow())
                     curr = curr.getLeft();
+
                 else
                     curr = curr.getRight();
             }
-            if (curr.getInterval().getLow() == i.getLow() && curr.getInterval().getHigh() == i.getHigh())
-                return curr;
-            else
                 return null;
         }
 

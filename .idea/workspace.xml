@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c9ea08c4-4efd-4160-88dc-565c347df530" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IntervalTreap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IntervalTreap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586140289339</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fixed delete">
+      <created>1586143337596</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1586143337596</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +247,8 @@
     <MESSAGE value="fixed null ptr err" />
     <MESSAGE value="got insertion to work!" />
     <MESSAGE value="fixed delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed delete" />
+    <MESSAGE value="more tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="more tests" />
   </component>
   <component name="WindowStateProjectService">
     <state x="637" y="165" width="800" height="678" key="#Project_Structure" timestamp="1586135148137">
@@ -257,9 +264,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1128" y="588" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586063433361" />
-    <state x="905" y="292" key="CommitChangelistDialog2" timestamp="1586140288154">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="543" y="13" key="CommitChangelistDialog2" timestamp="1586143351184">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="543" y="13" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586143351184" />
     <state x="905" y="292" key="CommitChangelistDialog2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586140288154" />
     <state width="2517" height="599" key="GridCell.Tab.0.bottom" timestamp="1586138094865">
       <screen x="0" y="0" width="2560" height="1400" />
@@ -309,13 +317,15 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1067" y="415" key="VCS.ChangeListViewerDialog/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586140922899" />
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1586140291311">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="523" y="254" key="Vcs.Push.Dialog.v2" timestamp="1586143340356">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="523" y="254" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586143340356" />
     <state x="872" y="432" key="Vcs.Push.Dialog.v2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586140291311" />
-    <state x="1089" y="616" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586140982792">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="653" y="363" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586142158233">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="653" y="363" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1586142158233" />
     <state x="1089" y="616" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586140982792" />
     <state x="841" y="435" width="877" height="603" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1586137103362">
       <screen x="0" y="0" width="2560" height="1400" />
