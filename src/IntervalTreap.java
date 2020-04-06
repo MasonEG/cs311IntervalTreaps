@@ -88,13 +88,14 @@ public class IntervalTreap {
         interval treap.
      */
     public void intervalInsert(Node z) {
-        Node temp = root;
-
-        if (temp == null) {
+        if (root == null) {
             setRoot(z);
             height++;
             size++;
+            return;
         }
+
+        Node temp = root;
         while (true) {
             if (z.getInterval().getLow() >= temp.getInterval().getLow() && temp.getRight() != null)
                 temp = temp.getRight();
