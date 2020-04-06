@@ -167,7 +167,7 @@ public class IntervalTreap {
         should be O(log n) on an n-node interval treap.
      */
         public Node intervalSearch (Interval i){
-            Node curr = this.root;
+            Node curr = root;
             while (curr != null && !i.overlaps(curr.getInterval())) {
                 if (curr.getLeft() != null && curr.getLeft().getIMax() >= i.getLow())
                     curr = curr.getLeft();
@@ -183,19 +183,23 @@ public class IntervalTreap {
         n-node interval treap.
          */
         public Node intervalSearchExactly (Interval i){
-            Node curr = this.root;
-            while (curr != null && !i.overlaps(curr.getInterval())) {
-                if (curr.getInterval().getLow() == i.getLow() && curr.getInterval().getHigh() == i.getHigh())
-                    return curr;
-
-                else if (curr.getLeft() != null && curr.getLeft().getIMax() >= i.getLow())
+            Node curr = root;
+            if (curr.getInterval().getLow() > i.getLow()){
+                if (curr.getLeft() != null)
                     curr = curr.getLeft();
-
                 else
-                    curr = curr.getRight();
+                    return null;
             }
-                return null;
+            else if( curr.getInterval().getLow() <= i.getLow()){
+                if (curr.getInterval().getHigh() == i.getHigh())
+                    return curr;
+                else{
+                    if (curr.getRight() != null)
+                        curr = curr.getRight();
+                    else
+                        return null;
+                }
+            }
+            return curr;
         }
-
-
     }
