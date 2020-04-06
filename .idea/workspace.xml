@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9ea08c4-4efd-4160-88dc-565c347df530" name="Default Changelist" comment="added to string method">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c9ea08c4-4efd-4160-88dc-565c347df530" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/IntervalTreap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IntervalTreap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586138501043</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added findSuccessor">
+      <created>1586140855996</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1586140855996</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,11 +236,12 @@
     <MESSAGE value="added break statements" />
     <MESSAGE value="removed dumb code" />
     <MESSAGE value="added rebalance method" />
-    <MESSAGE value="added to string method" />
     <MESSAGE value="making sure files are uploaded" />
     <MESSAGE value="fixed null ptr err" />
     <MESSAGE value="got insertion to work!" />
-    <option name="LAST_COMMIT_MESSAGE" value="got insertion to work!" />
+    <MESSAGE value="added to string method" />
+    <MESSAGE value="added findSuccessor" />
+    <option name="LAST_COMMIT_MESSAGE" value="added findSuccessor" />
   </component>
   <component name="WindowStateProjectService">
     <state x="637" y="165" width="800" height="678" key="#Project_Structure" timestamp="1586135148137">
@@ -251,9 +257,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1128" y="588" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586063433361" />
-    <state x="905" y="292" key="CommitChangelistDialog2" timestamp="1586138499773">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="543" y="13" key="CommitChangelistDialog2" timestamp="1586140855160">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="543" y="13" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586140855160" />
     <state x="905" y="292" key="CommitChangelistDialog2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586138499773" />
     <state width="2517" height="599" key="GridCell.Tab.0.bottom" timestamp="1586138094865">
       <screen x="0" y="0" width="2560" height="1400" />
@@ -303,9 +310,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1067" y="415" key="VCS.ChangeListViewerDialog/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586138419512" />
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1586138503405">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="523" y="254" key="Vcs.Push.Dialog.v2" timestamp="1586140857748">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="523" y="254" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586140857748" />
     <state x="872" y="432" key="Vcs.Push.Dialog.v2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586138503405" />
     <state x="1089" y="616" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586138424403">
       <screen x="0" y="0" width="2560" height="1400" />
