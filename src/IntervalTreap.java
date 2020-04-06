@@ -145,8 +145,15 @@ public class IntervalTreap {
                 z.getParent().setRight(z.getLeft());
             z = z.getLeft();
         }
-        else { //TODO
-
+        else {
+            Node succ = z.getSuccessor();
+            succ.setParent(z.getParent());
+            if (z.getParent().getLeft() == z)
+                z.getParent().setLeft(succ);
+            else
+                z.getParent().setRight(succ);
+            succ.setLeft(z.getLeft());
+            z.getLeft().setParent(succ);
         }
     }
 
