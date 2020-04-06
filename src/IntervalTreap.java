@@ -117,7 +117,7 @@ public class IntervalTreap {
                 break;
             }
         }
-
+        size++;
         rebalance(temp, z);
     }
 
@@ -128,56 +128,25 @@ public class IntervalTreap {
      */
     public void intervalDelete(Node z) {
 
-
-        //if the node youre deleting has two children you will have to rotate
-        Node temp = root;
-
-        if (temp == null) {
+        if (z == null) {
             return;
         }
-        // L/R subtree
-        if (z.getInterval().getLow() < temp.getInterval().getLow())
-            intervalDelete(temp.getLeft());
+        if (z.getLeft() == null ) {
+            if (z.getParent().getLeft() == z)
+                z.getParent().setLeft(z.getRight());
+            else
+                z.getParent().setRight(z.getRight());
+            z = z.getRight();
+        }
+        else if (z.getLeft() != null && z.getRight() == null) {
+            if (z.getParent().getLeft() == z)
+                z.getParent().setLeft(z.getLeft());
+            else
+                z.getParent().setRight(z.getLeft());
+            z = z.getLeft();
+        }
+        else { //TODO
 
-        else if (z.getInterval().getLow() > temp.getInterval().getLow())
-            intervalDelete(temp.getRight());
-
-            //node found
-        else {
-            // if node has no childern
-            if (temp.getLeft() == null && temp.getRight() == null) {
-                if (temp.getParent().getLeft() == z)
-                    temp.getParent().setLeft(null);
-                else
-                    temp.getParent().setRight(null);
-                temp = null;
-            }
-            //if node has 2 children
-            else if (temp.getLeft() != null && temp.getRight() != null) {
-                //left child has less priority than right child
-                if (temp.getLeft().getPriority() < temp.getRight().getPriority()) {
-                    rotate(temp, temp.getRight()); //rotate left
-                    intervalDelete(temp.getLeft());
-                } else
-                    rotate(temp, temp.getLeft()); //rotate right
-                intervalDelete(temp.getRight());
-
-            }
-            //if node has only one child
-            else {
-                Node child;
-                if (temp.getRight() == null) {
-                    child = temp.getLeft();
-                } else {
-                    child = temp.getRight();
-                }
-                child.setParent(temp.getParent());
-                if (temp.getParent().getRight() == temp)
-                    temp.getParent().setRight(child);
-                else {
-                    temp.getParent().setLeft(child);
-                }
-            }
         }
     }
 
