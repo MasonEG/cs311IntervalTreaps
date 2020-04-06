@@ -5,8 +5,6 @@ public class IntervalTreap {
 
     public IntervalTreap() {
         size = 0;
-//        height = (int) (Math.ceil(Math.log(n) / Math.log(2));
-        height = 0;
         root = null;
     }
 
@@ -55,10 +53,6 @@ public class IntervalTreap {
 
        if (lHeight > rHeight) return lHeight + 1;
        else return rHeight + 1;
-    }
-
-    public void addToHeight(int i) {
-        height += i;
     }
 
     int getMid(int s, int e) {
