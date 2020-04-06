@@ -59,10 +59,13 @@ public class IntervalTreap {
         return s + (e - s) / 2;
     }
 
-    public static void rotate(Node parentNode, Node childNode) { //bases off priority
-        Node parentParent = parentNode.getParent();
-        if (parentParent.getRight() == parentNode) parentParent.setRight(childNode);
-        else parentParent.setLeft(childNode);
+    public void rotate(Node parentNode, Node childNode) { //bases off priority
+        if (parentNode.getParent() != null) {
+            Node parentParent = parentNode.getParent();
+            if (parentParent.getRight() != null && parentParent.getRight() == parentNode) parentParent.setRight(childNode);
+            else parentParent.setLeft(childNode);
+        }
+
         if (parentNode.getRight() == childNode) { // rotate left
             childNode.setParent(parentNode.getParent());
             parentNode.setParent(childNode);
@@ -74,9 +77,13 @@ public class IntervalTreap {
             parentNode.setLeft(childNode.getRight());
             childNode.setRight(parentNode);
         }
+        if (root == parentNode) root = childNode;
+        Node temp = childNode;
+        childNode = parentNode;
+        parentNode = temp;
     }
 
-    public static void rebalance(Node p, Node c) {
+    public void rebalance(Node p, Node c) {
         while (p.getPriority() > c.getPriority()) {
             rotate(p, c);
             if (c.getParent() == null) return;
@@ -132,31 +139,50 @@ public class IntervalTreap {
             return;
         }
         if (z.getLeft() == null ) {
-            if (z.getParent().getLeft() == z)
-                z.getParent().setLeft(z.getRight());
-            else
-                z.getParent().setRight(z.getRight());
+            if(z.getParent() != null) {
+                if (z.getParent().getLeft() != null && z.getParent().getLeft() == z)
+                    z.getParent().setLeft(z.getRight());
+                else
+                    z.getParent().setRight(z.getRight());
+            }
+            z.getRight().setParent(z.getParent());
+            if (z == root) root = z.getRight();
             z = z.getRight();
         }
         else if (z.getLeft() != null && z.getRight() == null) {
-            if (z.getParent().getLeft() == z)
-                z.getParent().setLeft(z.getLeft());
-            else
-                z.getParent().setRight(z.getLeft());
+            if (z.getParent() != null) {
+                if (z.getParent().getLeft() != null && z.getParent().getLeft() == z)
+                    z.getParent().setLeft(z.getLeft());
+                else
+                    z.getParent().setRight(z.getLeft());
+            }
+            z.getLeft().setParent(z.getParent());
+            if (z == root) root = z.getLeft();
             z = z.getLeft();
         }
         else {
             Node succ = z.getSuccessor();
-            succ.setParent(z.getParent());
-            if (z.getParent().getLeft() == z)
-                z.getParent().setLeft(succ);
+            if (z.getParent() != null) {
+                if (z.getParent().getLeft() != null && z.getParent().getLeft() == z)
+                    z.getParent().setLeft(succ);
+                else
+                    z.getParent().setRight(succ);
+            }
+            if (z.getLeft() != null) {
+                succ.setLeft(z.getLeft());
+                succ.getLeft().setParent(succ);
+            }
+            if (succ.getParent().getRight() == succ)
+                succ.getParent().setRight(succ.getRight());
             else
-                z.getParent().setRight(succ);
-            succ.setLeft(z.getLeft());
-            z.getLeft().setParent(succ);
-            z = succ;
+                succ.getParent().setLeft(null);
+
+            succ.setParent(z.getParent());
+            succ.setRight(z.getRight());
+            if (z == root) root = succ;
+//            z = null;
         }
-        if (z != null) rebalance(z.getParent(), z);
+        if (z != null && z.getParent() != null) rebalance(z.getParent(), z);
     }
 
     /*

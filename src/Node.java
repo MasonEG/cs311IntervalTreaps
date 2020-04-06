@@ -17,6 +17,14 @@ public class Node {
         priority = r.nextInt();
     }
 
+    public Node (Node c) {
+        this.interval = c.getInterval();
+        this.left = c.getLeft();
+        this.right = c.getRight();
+        this.parent = c.getParent();
+        this.priority = c.getPriority();
+    }
+
     public Node getParent() {
         return parent;
     }
@@ -64,10 +72,6 @@ public class Node {
             ret = Integer.max(ret, right.getIMax());
         }
         return ret;
-    }
-
-    public void setIMax() {
-
     }
 
     public int getPriority() {
