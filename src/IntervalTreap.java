@@ -11,9 +11,18 @@ public class IntervalTreap {
     }
 
     public String toString() { //TODO
-        Node cur = root;
-        String ret = "";
-        return ret;
+        return toString(root);
+    }
+
+    public String toString(Node n) {
+       String ret =  "([" + n.getInterval().getLow() + ", " + n.getInterval().getHigh() + "] P: " + n.getPriority();
+       if (n.getLeft() != null) {
+           ret += " L: " + toString(n.getLeft());
+       }
+       if (n.getRight() != null) {
+           ret += " R: " + toString(n.getRight());
+       }
+       return ret + ")";
     }
 
     public Node getRoot() {
@@ -65,6 +74,7 @@ public class IntervalTreap {
     public static void rebalance(Node p, Node c) {
         while (p.getPriority() > c.getPriority()) {
             rotate (p, c);
+            if (c.getParent() == null) return;
             p = c.getParent();
         }
     }
