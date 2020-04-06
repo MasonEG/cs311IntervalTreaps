@@ -76,9 +76,10 @@ public class IntervalTreap {
 
         if (temp == null){
             setRoot(z);
-            addToSize(1);
-            addToHeight(1);
+            height++;
+            size++;
         }
+
 
         while(true) {
             if (z.getInterval().getLow() >= temp.getInterval().getLow() && temp.getRight() != null)
