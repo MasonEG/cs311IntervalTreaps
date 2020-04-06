@@ -20,12 +20,24 @@ public class IntervalTreap {
         return root;
     }
 
+    public void setRoot(Node n) {
+        root = n;
+    }
+
     public int getSize() {
         return size;
     }
 
+    public void addToSize(int i){
+        size += i;
+    }
+
     public int getHeight() {
         return height;
+    }
+
+    public void addToHeight(int i){
+        height += i;
     }
 
     int getMid(int s, int e) {
@@ -61,6 +73,12 @@ public class IntervalTreap {
      */
     public void intervalInsert(Node z) {
         Node temp = root;
+
+        if (temp == null){
+            setRoot(temp);
+            addToSize(1);
+            addToHeight(1);
+        }
 
         while(true) {
             if (z.getInterval().getLow() >= temp.getInterval().getLow() && temp.getRight() != null)
