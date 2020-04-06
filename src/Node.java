@@ -45,6 +45,15 @@ public class Node {
         return interval;
     }
 
+    public Node getSuccessor(){
+        Node ret = this;
+        ret = ret.getRight();
+        while(ret.getLeft() != null){
+            ret = ret.getLeft();
+        }
+        return ret;
+    }
+
     public int getIMax() {
         int ret = interval.getHigh();
 
