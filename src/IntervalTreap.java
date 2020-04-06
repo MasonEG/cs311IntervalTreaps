@@ -54,17 +54,20 @@ public class IntervalTreap {
         return s + (e - s) / 2;
     }
 
-    public static void rotate(Node parentNode, Node currNode) { //bases off priority
-        if (parentNode.getLeft() == currNode) { // rotate left
-            currNode.setParent(parentNode.getParent());
-            parentNode.setParent(currNode);
-            parentNode.setRight(currNode.getLeft());
-            currNode.setLeft(parentNode);
+    public static void rotate(Node parentNode, Node childNode) { //bases off priority
+        Node parentParent = parentNode.getParent();
+        if (parentParent.getRight() == parentNode) parentParent.setRight(childNode);
+        else parentParent.setLeft(childNode);
+        if (parentNode.getRight() == childNode) { // rotate left
+            childNode.setParent(parentNode.getParent());
+            parentNode.setParent(childNode);
+            parentNode.setRight(childNode.getLeft());
+            childNode.setLeft(parentNode);
         } else { // rotate right
-            currNode.setParent(parentNode.getParent());
-            parentNode.setParent(currNode);
-            parentNode.setLeft(currNode.getRight());
-            currNode.setRight(parentNode);
+            childNode.setParent(parentNode.getParent());
+            parentNode.setParent(childNode);
+            parentNode.setLeft(childNode.getRight());
+            childNode.setRight(parentNode);
         }
 
 
@@ -100,7 +103,7 @@ public class IntervalTreap {
             if (z.getInterval().getLow() >= temp.getInterval().getLow() && temp.getRight() != null)
                 temp = temp.getRight();
 
-            else if (z.getInterval().getLow() < temp.getInterval().getLow() && temp.getRight() != null)
+            else if (z.getInterval().getLow() < temp.getInterval().getLow() && temp.getLeft() != null)
                 temp = temp.getLeft();
 
             else if (z.getInterval().getLow() >= temp.getInterval().getLow() && temp.getRight() == null) {
@@ -108,15 +111,14 @@ public class IntervalTreap {
                 z.setParent(temp);
                 break;
 
-            } else if (z.getInterval().getLow() > temp.getInterval().getLow() && temp.getLeft() == null) {
+            } else if (z.getInterval().getLow() < temp.getInterval().getLow() && temp.getLeft() == null) {
                 temp.setLeft(z);
                 z.setParent(temp);
                 break;
-
             }
         }
 
-        rebalance(z, temp);
+        rebalance(temp, z);
     }
 
     /*
