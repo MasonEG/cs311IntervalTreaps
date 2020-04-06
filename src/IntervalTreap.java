@@ -94,8 +94,6 @@ public class IntervalTreap {
             height++;
             size++;
         }
-
-
         while (true) {
             if (z.getInterval().getLow() >= temp.getInterval().getLow() && temp.getRight() != null)
                 temp = temp.getRight();
@@ -152,9 +150,34 @@ public class IntervalTreap {
             }
             //if node has 2 children
             else if (temp.getLeft() != null && temp.getRight() != null){
+                //left child has less priority than right child
+                if (temp.getLeft().getPriority() < temp.getRight().getPriority()){
+                    rotate(temp, temp.getRight()); //rotate left
+                    intervalDelete(temp.getLeft());
+                }
+                else
+                    rotate(temp, temp.getLeft()); //rotate right
+                    intervalDelete(temp.getRight());
 
             }
+            //if node has only one child
+            else{
+                if(temp.getRight() == null){
+                    Node child = temp.getLeft();
+                    child.setParent(temp.getParent());
+                    if( temp.getParent().getRight() == temp)
+                        temp.getParent().setRight(child);
+                    else{
+                        temp.getParent().setLeft(child);
+                    }
+                }
+                child.setParent(temp.getParent());
+                if( temp.getParent().getRight() == temp)
+                    temp.getParent().setRight(child);
+                else{
+                    temp.getParent().setLeft(child);
 
+            }
         }
     }
 
