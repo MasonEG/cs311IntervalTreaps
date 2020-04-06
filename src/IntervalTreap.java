@@ -138,6 +138,10 @@ public class IntervalTreap {
                     temp.getParent().setLeft(null);
                 else
                     temp.getParent().setRight(null);
+                temp = null;
+            }
+            //if node has 2 children
+            else if (temp.getLeft() != null && temp.getRight() != null){
 
             }
 
