@@ -61,9 +61,8 @@ public class IntervalTreap {
      */
     public void intervalInsert(Node z) {
         Node temp = root;
-        boolean flag = false;
 
-        while(!flag) {
+        while(true) {
             if (z.getInterval().getLow() >= temp.getInterval().getLow() && temp.getRight() != null)
                 temp = temp.getRight();
 
@@ -73,12 +72,12 @@ public class IntervalTreap {
             else if (z.getInterval().getLow() >= temp.getInterval().getLow() && temp.getRight() == null) {
                 temp.setRight(z);
                 z.setParent(temp);
-                flag = true;
+                break;
 
             } else if (z.getInterval().getLow() > temp.getInterval().getLow() && temp.getLeft() == null) {
                 temp.setLeft(z);
                 z.setParent(temp);
-                flag = true;
+                break;
 
             }
 
