@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9ea08c4-4efd-4160-88dc-565c347df530" name="Default Changelist" comment="added to string method">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c9ea08c4-4efd-4160-88dc-565c347df530" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/IntervalTreap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IntervalTreap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1586056161801</updated>
       <workItem from="1586059782624" duration="8434000" />
-      <workItem from="1586127920899" duration="11744000" />
+      <workItem from="1586127920899" duration="12879000" />
     </task>
     <task id="LOCAL-00001" summary="started writing IntervalTreap and IntervalNode classes">
       <created>1586061295439</created>
@@ -212,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586138501043</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fixed delete">
+      <created>1586140289339</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1586140289339</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +240,8 @@
     <MESSAGE value="making sure files are uploaded" />
     <MESSAGE value="fixed null ptr err" />
     <MESSAGE value="got insertion to work!" />
-    <option name="LAST_COMMIT_MESSAGE" value="got insertion to work!" />
+    <MESSAGE value="fixed delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed delete" />
   </component>
   <component name="WindowStateProjectService">
     <state x="637" y="165" width="800" height="678" key="#Project_Structure" timestamp="1586135148137">
@@ -251,10 +257,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1128" y="588" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586063433361" />
-    <state x="905" y="292" key="CommitChangelistDialog2" timestamp="1586138499773">
+    <state x="905" y="292" key="CommitChangelistDialog2" timestamp="1586140288154">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="905" y="292" key="CommitChangelistDialog2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586138499773" />
+    <state x="905" y="292" key="CommitChangelistDialog2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586140288154" />
     <state width="2517" height="599" key="GridCell.Tab.0.bottom" timestamp="1586138094865">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -291,26 +297,26 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="248" y="121" key="MergeDialog/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586138489084" />
-    <state x="992" y="415" key="MultipleFileMergeDialog" timestamp="1586138489092">
+    <state x="992" y="415" key="MultipleFileMergeDialog" timestamp="1586140952267">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="992" y="415" key="MultipleFileMergeDialog/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586138489092" />
+    <state x="992" y="415" key="MultipleFileMergeDialog/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586140952267" />
     <state x="781" y="342" key="SettingsEditor" timestamp="1586063604739">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="781" y="342" key="SettingsEditor/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586063604739" />
-    <state x="1067" y="415" key="VCS.ChangeListViewerDialog" timestamp="1586138419512">
+    <state x="1067" y="415" key="VCS.ChangeListViewerDialog" timestamp="1586140922899">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1067" y="415" key="VCS.ChangeListViewerDialog/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586138419512" />
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1586138503405">
+    <state x="1067" y="415" key="VCS.ChangeListViewerDialog/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586140922899" />
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1586140291311">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586138503405" />
-    <state x="1089" y="616" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586138424403">
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586140291311" />
+    <state x="1089" y="616" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586140982792">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1089" y="616" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586138424403" />
+    <state x="1089" y="616" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586140982792" />
     <state x="841" y="435" width="877" height="603" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1586137103362">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
