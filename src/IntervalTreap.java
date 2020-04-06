@@ -75,7 +75,7 @@ public class IntervalTreap {
         Node temp = root;
 
         if (temp == null){
-            setRoot(temp);
+            setRoot(z);
             addToSize(1);
             addToHeight(1);
         }
