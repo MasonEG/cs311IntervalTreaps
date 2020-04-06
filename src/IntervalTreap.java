@@ -6,7 +6,8 @@ public class IntervalTreap {
 
     public IntervalTreap() {
         size = 0;
-        height = (int) (Math.ceil(Math.log(n) / Math.log(2));
+//        height = (int) (Math.ceil(Math.log(n) / Math.log(2));
+        height = 0;
         root = null;
     }
 
@@ -15,14 +16,14 @@ public class IntervalTreap {
     }
 
     public String toString(Node n) {
-       String ret =  "([" + n.getInterval().getLow() + ", " + n.getInterval().getHigh() + "] P: " + n.getPriority();
-       if (n.getLeft() != null) {
-           ret += " L: " + toString(n.getLeft());
-       }
-       if (n.getRight() != null) {
-           ret += " R: " + toString(n.getRight());
-       }
-       return ret + ")";
+        String ret = "([" + n.getInterval().getLow() + ", " + n.getInterval().getHigh() + "] P: " + n.getPriority();
+        if (n.getLeft() != null) {
+            ret += " L: " + toString(n.getLeft());
+        }
+        if (n.getRight() != null) {
+            ret += " R: " + toString(n.getRight());
+        }
+        return ret + ")";
     }
 
     public Node getRoot() {
@@ -73,7 +74,7 @@ public class IntervalTreap {
 
     public static void rebalance(Node p, Node c) {
         while (p.getPriority() > c.getPriority()) {
-            rotate (p, c);
+            rotate(p, c);
             if (c.getParent() == null) return;
             p = c.getParent();
         }
@@ -114,7 +115,7 @@ public class IntervalTreap {
             }
         }
 
-        rebalance (z, temp);
+        rebalance(z, temp);
     }
 
     /*
@@ -128,7 +129,7 @@ public class IntervalTreap {
         //if the node youre deleting has two children you will have to rotate
         Node temp = root;
 
-        if (temp == null){
+        if (temp == null) {
             return;
         }
         // L/R subtree
@@ -138,45 +139,41 @@ public class IntervalTreap {
         else if (z.getInterval().getLow() > temp.getInterval().getLow())
             intervalDelete(temp.getRight());
 
-        //node found
-        else{
+            //node found
+        else {
             // if node has no childern
-            if (temp.getLeft() == null && temp.getRight() == null){
-                if(temp.getParent().getLeft() == z)
+            if (temp.getLeft() == null && temp.getRight() == null) {
+                if (temp.getParent().getLeft() == z)
                     temp.getParent().setLeft(null);
                 else
                     temp.getParent().setRight(null);
                 temp = null;
             }
             //if node has 2 children
-            else if (temp.getLeft() != null && temp.getRight() != null){
+            else if (temp.getLeft() != null && temp.getRight() != null) {
                 //left child has less priority than right child
-                if (temp.getLeft().getPriority() < temp.getRight().getPriority()){
+                if (temp.getLeft().getPriority() < temp.getRight().getPriority()) {
                     rotate(temp, temp.getRight()); //rotate left
                     intervalDelete(temp.getLeft());
-                }
-                else
+                } else
                     rotate(temp, temp.getLeft()); //rotate right
-                    intervalDelete(temp.getRight());
+                intervalDelete(temp.getRight());
 
             }
             //if node has only one child
-            else{
-                if(temp.getRight() == null){
-                    Node child = temp.getLeft();
-                    child.setParent(temp.getParent());
-                    if( temp.getParent().getRight() == temp)
-                        temp.getParent().setRight(child);
-                    else{
-                        temp.getParent().setLeft(child);
-                    }
+            else {
+                Node child;
+                if (temp.getRight() == null) {
+                    child = temp.getLeft();
+                } else {
+                    child = temp.getRight();
                 }
                 child.setParent(temp.getParent());
-                if( temp.getParent().getRight() == temp)
+                if (temp.getParent().getRight() == temp)
                     temp.getParent().setRight(child);
-                else{
+                else {
                     temp.getParent().setLeft(child);
-
+                }
             }
         }
     }
@@ -187,16 +184,16 @@ public class IntervalTreap {
         This method must not modify the interval treap. The expected running time of this method
         should be O(log n) on an n-node interval treap.
      */
-    public Node intervalSearch(Interval i) {
-        Node curr = this.root;
-        while (curr != null && !i.overlaps(curr.getInterval())) {
-            if (curr.getLeft() != null && curr.getLeft().getIMax() >= i.getLow())
-                curr = curr.getLeft();
-            else
-                curr = curr.getLeft();
+        public Node intervalSearch (Interval i){
+            Node curr = this.root;
+            while (curr != null && !i.overlaps(curr.getInterval())) {
+                if (curr.getLeft() != null && curr.getLeft().getIMax() >= i.getLow())
+                    curr = curr.getLeft();
+                else
+                    curr = curr.getLeft();
+            }
+            return curr;
         }
-        return curr;
+
+
     }
-
-
-}
