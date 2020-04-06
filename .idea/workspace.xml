@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9ea08c4-4efd-4160-88dc-565c347df530" name="Default Changelist" comment="">
+    <list default="true" id="c9ea08c4-4efd-4160-88dc-565c347df530" name="Default Changelist" comment="forgot to save on last commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/IntervalTreap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IntervalTreap.java" afterDir="false" />
     </list>
@@ -72,7 +72,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586056161801</updated>
-      <workItem from="1586059782624" duration="2966000" />
+      <workItem from="1586059782624" duration="8434000" />
+      <workItem from="1586127920899" duration="3958000" />
     </task>
     <task id="LOCAL-00001" summary="started writing IntervalTreap and IntervalNode classes">
       <created>1586061295439</created>
@@ -102,61 +103,61 @@
       <option name="project" value="LOCAL" />
       <updated>1586061988468</updated>
     </task>
-    <task id="LOCAL-00005" summary="changed class names">
-      <created>1586063210828</created>
+    <task id="LOCAL-00005" summary="added Interval nodes">
+      <created>1586062881378</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1586063210828</updated>
+      <updated>1586062881378</updated>
     </task>
-    <task id="LOCAL-00006" summary="changed class names">
-      <created>1586063256843</created>
+    <task id="LOCAL-00006" summary="small changes, updated IntervalDatabase.java">
+      <created>1586065308146</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1586063256843</updated>
+      <updated>1586065308146</updated>
     </task>
-    <task id="LOCAL-00007" summary="set up class methods">
-      <created>1586065378358</created>
+    <task id="LOCAL-00007" summary="fixed interval search">
+      <created>1586065562406</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1586065378358</updated>
+      <updated>1586065562406</updated>
     </task>
-    <task id="LOCAL-00008" summary="set up class methods">
-      <created>1586066741655</created>
+    <task id="LOCAL-00008" summary="added get Imax">
+      <created>1586067254401</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1586066741655</updated>
+      <updated>1586067254401</updated>
     </task>
-    <task id="LOCAL-00009" summary="set up class methods">
-      <created>1586127843571</created>
+    <task id="LOCAL-00009" summary="fixed overlaps and whitespace">
+      <created>1586068020659</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1586127843571</updated>
+      <updated>1586068020659</updated>
     </task>
-    <task id="LOCAL-00010" summary="set up class methods">
-      <created>1586129146085</created>
+    <task id="LOCAL-00010" summary="added rotate methods">
+      <created>1586130336663</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1586129146085</updated>
+      <updated>1586130336663</updated>
     </task>
-    <task id="LOCAL-00011" summary="set up class methods">
-      <created>1586130386546</created>
+    <task id="LOCAL-00011" summary="added break statements">
+      <created>1586131247292</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1586130386546</updated>
+      <updated>1586131247292</updated>
     </task>
-    <task id="LOCAL-00012" summary="set up class methods">
-      <created>1586131131491</created>
+    <task id="LOCAL-00012" summary="removed dumb code">
+      <created>1586131695528</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1586131131491</updated>
+      <updated>1586131695528</updated>
     </task>
     <option name="localTasksCounter" value="13" />
     <servers />
@@ -168,44 +169,56 @@
     <MESSAGE value="started writing IntervalTreap and IntervalNode classes" />
     <MESSAGE value="Created Interval database and changed IntervalNode to Interval" />
     <MESSAGE value="changed class names" />
-    <MESSAGE value="set up class methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="set up class methods" />
+    <MESSAGE value="added Interval nodes" />
+    <MESSAGE value="small changes, updated IntervalDatabase.java" />
+    <MESSAGE value="fixed interval search" />
+    <MESSAGE value="added get Imax" />
+    <MESSAGE value="fixed overlaps and whitespace" />
+    <MESSAGE value="added rotate methods" />
+    <MESSAGE value="added break statements" />
+    <MESSAGE value="removed dumb code" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed dumb code" />
   </component>
   <component name="WindowStateProjectService">
     <state x="398" y="127" width="800" height="678" key="#Project_Structure" timestamp="1586056176005">
       <screen x="0" y="24" width="1600" height="876" />
     </state>
     <state x="398" y="127" width="800" height="678" key="#Project_Structure/0.24.1600.876@0.24.1600.876" timestamp="1586056176005" />
-    <state x="190" y="113" key="#com.intellij.ide.util.MemberChooser" timestamp="1586064633473">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="1128" y="588" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1586063433361">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="190" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586064633473" />
-    <state x="677" y="346" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1586128700295">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="1128" y="588" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586063433361" />
+    <state x="905" y="292" key="CommitChangelistDialog2" timestamp="1586132610575">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="677" y="346" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1586128700295" />
-    <state x="1128" y="588" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586061383979" />
-    <state x="543" y="13" key="CommitChangelistDialog2" timestamp="1586131548789">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="905" y="292" key="CommitChangelistDialog2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586132610575" />
+    <state x="248" y="121" key="MergeDialog" timestamp="1586063322724">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="543" y="13" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586131548789" />
-    <state x="905" y="292" key="CommitChangelistDialog2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586061987528" />
-    <state x="99" y="131" key="MultipleFileMergeDialog" timestamp="1586068120288">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="248" y="121" key="MergeDialog/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586063322724" />
+    <state x="992" y="415" key="MultipleFileMergeDialog" timestamp="1586131643159">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="99" y="131" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1586068120288" />
-    <state x="0" y="55" key="SettingsEditor" timestamp="1586063737043">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="992" y="415" key="MultipleFileMergeDialog/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586131643159" />
+    <state x="781" y="342" key="SettingsEditor" timestamp="1586063604739">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="0" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586063737043" />
-    <state x="523" y="254" key="Vcs.Push.Dialog.v2" timestamp="1586131552881">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="781" y="342" key="SettingsEditor/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586063604739" />
+    <state x="1067" y="415" key="VCS.ChangeListViewerDialog" timestamp="1586065416938">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="523" y="254" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586131552880" />
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586061991843" />
-    <state x="194" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586131268603">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="1067" y="415" key="VCS.ChangeListViewerDialog/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586065416938" />
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1586131698147">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="194" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1586131268603" />
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586131698147" />
+    <state x="1089" y="616" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586131636680">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1089" y="616" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586131636680" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1586065669016">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/2560.363.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586065669016" />
   </component>
 </project>

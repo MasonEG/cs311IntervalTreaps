@@ -28,7 +28,7 @@ public class IntervalTreap {
         return size;
     }
 
-    public void addToSize(int i){
+    public void addToSize(int i) {
         size += i;
     }
 
@@ -36,7 +36,7 @@ public class IntervalTreap {
         return height;
     }
 
-    public void addToHeight(int i){
+    public void addToHeight(int i) {
         height += i;
     }
 
@@ -50,8 +50,7 @@ public class IntervalTreap {
             parentNode.setParent(currNode);
             parentNode.setRight(currNode.getLeft());
             currNode.setLeft(parentNode);
-        }
-        else { // rotate right
+        } else { // rotate right
             currNode.setParent(parentNode.getParent());
             parentNode.setParent(currNode);
             parentNode.setLeft(currNode.getRight());
@@ -59,9 +58,15 @@ public class IntervalTreap {
         }
 
 
+        //TODO update height
 
-            //update height and imax
+    }
 
+    public static void rebalance(Node p, Node c) {
+        while (p.getPriority() > c.getPriority()) {
+            rotate (p, c);
+            p = c.getParent();
+        }
     }
 
 
@@ -74,14 +79,14 @@ public class IntervalTreap {
     public void intervalInsert(Node z) {
         Node temp = root;
 
-        if (temp == null){
+        if (temp == null) {
             setRoot(z);
             height++;
             size++;
         }
 
 
-        while(true) {
+        while (true) {
             if (z.getInterval().getLow() >= temp.getInterval().getLow() && temp.getRight() != null)
                 temp = temp.getRight();
 
@@ -99,9 +104,9 @@ public class IntervalTreap {
                 break;
 
             }
-
         }
 
+        rebalance (z, temp);
     }
 
     /*
