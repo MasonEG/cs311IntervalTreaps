@@ -191,9 +191,28 @@ public class IntervalTreap {
                 if (curr.getLeft() != null && curr.getLeft().getIMax() >= i.getLow())
                     curr = curr.getLeft();
                 else
-                    curr = curr.getLeft();
+                    curr = curr.getRight();
             }
             return curr;
+        }
+        /*
+        Returns a reference to a Node object x
+        in the treap such that x.interv.low = i.low and x.interv.high = i.high, or null if
+        no such node exists. The expected running time of this method should be O(log n) on an
+        n-node interval treap.
+         */
+        public Node intervalSearchExactly (Interval i){
+            Node curr = this.root;
+            while (curr != null && !i.overlaps(curr.getInterval())) {
+                if (curr.getLeft() != null && curr.getLeft().getIMax() >= i.getLow())
+                    curr = curr.getLeft();
+                else
+                    curr = curr.getRight();
+            }
+            if (curr.getInterval().getLow() == i.getLow() && curr.getInterval().getHigh() == i.getHigh())
+                return curr;
+            else
+                return null;
         }
 
 
