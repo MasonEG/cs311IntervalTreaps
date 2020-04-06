@@ -118,7 +118,30 @@ public class IntervalTreap {
 
 
         //if the node youre deleting has two children you will have to rotate
+        Node temp = root;
 
+        if (temp == null){
+            return;
+        }
+        // L/R subtree
+        if (z.getInterval().getLow() < temp.getInterval().getLow())
+            intervalDelete(temp.getLeft());
+
+        else if (z.getInterval().getLow() > temp.getInterval().getLow())
+            intervalDelete(temp.getRight());
+
+        //node found
+        else{
+            // if node has no childern
+            if (temp.getLeft() == null && temp.getRight() == null){
+                if(temp.getParent().getLeft() == z)
+                    temp.getParent().setLeft(null);
+                else
+                    temp.getParent().setRight(null);
+
+            }
+
+        }
     }
 
     /*
