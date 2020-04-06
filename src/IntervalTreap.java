@@ -2,7 +2,6 @@ public class IntervalTreap {
 
     private Node root;
     private int size;
-    private int height;
 
     public IntervalTreap() {
         size = 0;
@@ -43,7 +42,19 @@ public class IntervalTreap {
     }
 
     public int getHeight() {
-        return height;
+        return getHeightRec(root);
+    }
+
+    public int getHeightRec(Node n) {
+       if (n == null) return 0;
+       int lHeight = 0;
+       int rHeight = 0;
+
+       if (n.getLeft() != null) lHeight = getHeightRec(n.getLeft());
+       if (n.getRight() != null) rHeight = getHeightRec(n.getRight());
+
+       if (lHeight > rHeight) return lHeight + 1;
+       else return rHeight + 1;
     }
 
     public void addToHeight(int i) {
@@ -69,10 +80,6 @@ public class IntervalTreap {
             parentNode.setLeft(childNode.getRight());
             childNode.setRight(parentNode);
         }
-
-
-        //TODO update height
-
     }
 
     public static void rebalance(Node p, Node c) {
@@ -93,7 +100,6 @@ public class IntervalTreap {
     public void intervalInsert(Node z) {
         if (root == null) {
             setRoot(z);
-            height++;
             size++;
             return;
         }
@@ -154,7 +160,9 @@ public class IntervalTreap {
                 z.getParent().setRight(succ);
             succ.setLeft(z.getLeft());
             z.getLeft().setParent(succ);
+            z = succ;
         }
+        if (z != null) rebalance(z.getParent(), z);
     }
 
     /*
