@@ -1,3 +1,7 @@
+/**
+ * @author Mason Gil
+ * @author Andrei Baechle
+ */
 import java.util.Random;
 
 public class Node {
@@ -18,7 +22,7 @@ public class Node {
     }
 
     public Node (Node c) {
-        this.interval = c.getInterval();
+        this.interval = c.getInterv();
         this.left = c.getLeft();
         this.right = c.getRight();
         this.parent = c.getParent();
@@ -49,7 +53,7 @@ public class Node {
         right = n;
     }
 
-    public Interval getInterval() {
+    public Interval getInterv() {
         return interval;
     }
 

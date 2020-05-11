@@ -1,3 +1,7 @@
+/**
+ * @author Mason Gil
+ * @author Andrei Baechle
+ */
 public class IntervalTreap {
 
     private Node root;
@@ -13,7 +17,7 @@ public class IntervalTreap {
     }
 
     public String toString(Node n) {
-        String ret = "([" + n.getInterval().getLow() + ", " + n.getInterval().getHigh() + "] P: " + n.getPriority();
+        String ret = "([" + n.getInterv().getLow() + ", " + n.getInterv().getHigh() + "] P: " + n.getPriority();
         if (n.getLeft() != null) {
             ret += " L: " + toString(n.getLeft());
         }
@@ -108,18 +112,18 @@ public class IntervalTreap {
         Node temp = root;
         while (true) {
 
-            if (z.getInterval().getLow() >= temp.getInterval().getLow() && temp.getRight() != null)
+            if (z.getInterv().getLow() >= temp.getInterv().getLow() && temp.getRight() != null)
                 temp = temp.getRight();
 
-            else if (z.getInterval().getLow() < temp.getInterval().getLow() && temp.getLeft() != null)
+            else if (z.getInterv().getLow() < temp.getInterv().getLow() && temp.getLeft() != null)
                 temp = temp.getLeft();
 
-            else if (z.getInterval().getLow() >= temp.getInterval().getLow() && temp.getRight() == null) {
+            else if (z.getInterv().getLow() >= temp.getInterv().getLow() && temp.getRight() == null) {
                 temp.setRight(z);
                 z.setParent(temp);
                 break;
 
-            } else if (z.getInterval().getLow() < temp.getInterval().getLow() && temp.getLeft() == null) {
+            } else if (z.getInterv().getLow() < temp.getInterv().getLow() && temp.getLeft() == null) {
                 temp.setLeft(z);
                 z.setParent(temp);
                 break;
@@ -194,7 +198,7 @@ public class IntervalTreap {
      */
         public Node intervalSearch (Interval i){
             Node curr = root;
-            while (curr != null && !i.overlaps(curr.getInterval())) {
+            while (curr != null && !i.overlaps(curr.getInterv())) {
                 if (curr.getLeft() != null && curr.getLeft().getIMax() >= i.getLow())
                     curr = curr.getLeft();
                 else
@@ -210,14 +214,14 @@ public class IntervalTreap {
          */
         public Node intervalSearchExactly (Interval i){
             Node curr = root;
-            if (curr.getInterval().getLow() > i.getLow()){
+            if (curr.getInterv().getLow() > i.getLow()){
                 if (curr.getLeft() != null)
                     curr = curr.getLeft();
                 else
                     return null;
             }
-            else if( curr.getInterval().getLow() <= i.getLow()){
-                if (curr.getInterval().getHigh() == i.getHigh())
+            else if( curr.getInterv().getLow() <= i.getLow()){
+                if (curr.getInterv().getHigh() == i.getHigh())
                     return curr;
                 else{
                     if (curr.getRight() != null)
