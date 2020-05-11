@@ -57,6 +57,22 @@ public class Node {
         return interval;
     }
 
+    public int getHeightOfSubtree() {
+        return getHeightRec(this);
+    }
+
+    public int getHeightRec(Node n) {
+        if (n == null) return 0;
+        int lHeight = 0;
+        int rHeight = 0;
+
+        if (n.getLeft() != null) lHeight = getHeightRec(n.getLeft());
+        if (n.getRight() != null) rHeight = getHeightRec(n.getRight());
+
+        if (lHeight > rHeight) return lHeight + 1;
+        else return rHeight + 1;
+    }
+
     public Node getSuccessor(){
         Node ret = this;
         ret = ret.getRight();
